@@ -26,6 +26,7 @@ router.delete('/delete/id:', tradeController.deleteTrade);
 router.get('/addEquity', equityController.getAllEquity);
 router.post('/addEquity', equityController.postEquity);
 router.get('/cards', tradeController.getTrades);
+router.delete('/cards/:id', tradeController.deleteTrade);
 router.post('/cards', tradeController.postTrade);
 // router.get('/', controller.redirect404);
 
