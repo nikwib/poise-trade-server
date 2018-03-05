@@ -4,7 +4,6 @@ const bodyParser = require('koa-bodyparser');
 const mongoose = require('./db_mongoose.js');
 const sequelize = require('./db_sequelize.js');
 const router = require('./router.js');
-// const cors = require('koa-cors');
 const cors = require('kcors');
 
 app.use(cors());

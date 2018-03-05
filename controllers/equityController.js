@@ -1,26 +1,9 @@
 'use strict';
 const equityModel = require('../models/equityModel.js');
-// const Sequelize = require('sequelize');
-// const sequelize = require('../db_sequelize');
-
-// const equityModel = sequelize.define('equity', {
-//   name: {
-//     type: Sequelize.STRING,
-//     allowNull: false
-//   },
-//   ticker: {
-//     type: Sequelize.STRING(10),
-//     allowNull: false
-//   },
-//   size: {
-//     type: Sequelize.STRING(10),
-//     allowNull: false
-//   }
-// });
 
 exports.getAllEquity = async (ctx) => {   
   try {
-    const data = await equityModel.findAll(); // Return the resolved promise, store in a constant.
+    const data = await equityModel.findAll(); 
     console.log('Reading data from model: ',data);
     ctx.body = data;
   } catch (e) {

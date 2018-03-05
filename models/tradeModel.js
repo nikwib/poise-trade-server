@@ -6,7 +6,6 @@ const TradeSchema = mongoose.Schema(
     quantity: { type: Number, default: 0 },
     entryPrice: { type: Number, default: 0 },
     entryDate: {type: Date, default: Date.now },
-    // strategies: [{}],
     strategies: String,
     exitPrice: { type: Number, default: 0 },
     exitDate: {type: Date, default: Date.now },

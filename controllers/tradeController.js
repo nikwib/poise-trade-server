@@ -11,6 +11,22 @@ exports.getTrades = async (ctx) => {
   }
 };
 
+exports.updateTrade = async (ctx) => {
+  try {
+    const tradeData = ctx.request.body;
+    console.log('trade to update: ', tradeData)
+    const trade = await Trade.findOneAndUpdate({ _id: tradeData._id }, { ...tradeData })
+    ctx.status = 200;
+    ctx.body = trade;
+  } catch (e) {
+    ctx.status = 503;
+    ctx.body = { 
+      status: 'Service Unavailable, error updating DB' , 
+      message: e }
+  };
+};
+
+
 exports.deleteTrade = async (ctx) => {
   try {
     const id = ctx.params.id;
