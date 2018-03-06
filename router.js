@@ -1,7 +1,9 @@
 const Router = require('koa-router');
 const equityController = require('./controllers/equityController.js');
 const tradeController = require('./controllers/tradeController.js');
-const yahooApiController =require('./controllers/yahooApiController.js')
+const YahooApiController = require('./controllers/yahooApiController.js')
+
+yahooApiController = new YahooApiController;
 router = new Router();
 
 router.get('/addEquity', equityController.getAllEquity);
