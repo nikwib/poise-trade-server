@@ -12,6 +12,8 @@ const TradeSchema = mongoose.Schema(
     ATR: { type: Number, default: 0 },
     notes: String,
     status: String,
+    title: String,
+    marketPrice: { type: Number, default: 0 },
   }
 )
 

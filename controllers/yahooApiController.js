@@ -1,4 +1,5 @@
 const yahooFinance = require('yahoo-finance');
+const Trade = require('../models/tradeModel.js');
 
 class YahooApiController {
   constructor(injectedYahooFinance) {
@@ -15,13 +16,17 @@ class YahooApiController {
         symbol: ticker,
         modules: ['price', 'summaryDetail']
       });
+      const trade = await Trade.findOneAndUpdate({ equity: ticker }, 
+        { title:quote.price.shortName, 
+          marketPrice: quote.price.regularMarketPrice 
+        });
       ctx.status = 200;
       ctx.body = quote;
-      console.log('DATA : ',quote);
+      // console.log('DATA : ',quote);
     } catch (e) {
       ctx.status = 400;
       ctx.body = 'Error reading Yahoo Finance: ';
-      console.log('Error reading Yahoo Finance: ', e);
+      // console.log('Error reading Yahoo Finance: ', e);
     }
   };
 

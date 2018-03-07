@@ -48,7 +48,7 @@ exports.deleteTrade = async (ctx) => {
 exports.postTrade = async (ctx) => {
   try {
     const tradeData = ctx.request.body;
-    console.log('Data Body incoming: ', tradeData);
+    console.log('Data Body incoming: ', tradeData);    
     const trade = await Trade.create(
       {
         equity: tradeData.equity,
@@ -61,7 +61,7 @@ exports.postTrade = async (ctx) => {
         ATR: tradeData.ATR,
         notes: tradeData.notes,
         status: tradeData.status,
-      })
+      });
     ctx.body = trade;
     console.log('Inserted to DB after post', trade);
     // await ctx.response.json(trade)

@@ -1,5 +1,6 @@
-exports.quote = { summaryDetail:
-  { maxAge: 1,
+exports.quote = { 
+  summaryDetail:{ 
+    maxAge: 1,
     priceHint: 2,
     previousClose: 1094.76,
     open: 1102.1025,
@@ -31,9 +32,10 @@ exports.quote = { summaryDetail:
     fromCurrency: null,
     lastMarket: null,
     algorithm: null,
-    tradeable: true },
- price:
-  { maxAge: 1,
+    tradeable: true 
+  },
+  price:{ 
+    maxAge: 1,
     preMarketChangePercent: 0.0072709643,
     preMarketChange: 7.959961,
     preMarketTime: "2018-03-06T14:29:29.000Z",
@@ -66,4 +68,6 @@ exports.quote = { summaryDetail:
     currencySymbol: '$',
     fromCurrency: null,
     lastMarket: null,
-    marketCap: 761512263680 } }
+    marketCap: 761512263680 
+  } 
+}
