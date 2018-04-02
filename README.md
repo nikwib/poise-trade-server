@@ -1,4 +1,4 @@
-# Poise Trade station Backend Server 
+# Poise Trade Station Backend Server 
 This repo contains the backend server for the Front-end: (https://github.com/nikwib/poise-trader)
 
 # Getting started
